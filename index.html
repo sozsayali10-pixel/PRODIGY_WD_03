@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="container">
+
+    <h1>🎮 Tic Tac Toe</h1>
+
+    <div class="mode-select">
+        <button onclick="setMode('pvp')">👥 Player vs Player</button>
+        <button onclick="setMode('ai')">🤖 Play vs Computer</button>
+    </div>
+
+    <div class="scoreboard">
+        <p>❌ X: <span id="scoreX">0</span></p>
+        <p>⭕ O: <span id="scoreO">0</span></p>
+    </div>
+
+    <div class="board">
+        <div class="box" data-index="0"></div>
+        <div class="box" data-index="1"></div>
+        <div class="box" data-index="2"></div>
+        <div class="box" data-index="3"></div>
+        <div class="box" data-index="4"></div>
+        <div class="box" data-index="5"></div>
+        <div class="box" data-index="6"></div>
+        <div class="box" data-index="7"></div>
+        <div class="box" data-index="8"></div>
+    </div>
+
+    <h2 id="status">Select Mode</h2>
+
+    <button onclick="resetGame()">🔄 Restart</button>
+    <button onclick="toggleTheme()">🌙 Toggle Mode</button>
+
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="winnerText"></h2>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<!-- Confetti -->
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
